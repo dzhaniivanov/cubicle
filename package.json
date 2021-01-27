@@ -1,0 +1,25 @@
+{
+  "name": "cubicle",
+  "version": "1.0.0",
+    "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":"SET NODE_ENV=development &&nodemon ./index.js",
+    "prod":"SET NODE_ENV=production && node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzhaniivanov94/cubicle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dzhaniivanov94/cubicle/issues"
+  },
+  "homepage": "https://github.com/dzhaniivanov94/cubicle#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
