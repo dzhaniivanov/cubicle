@@ -6,8 +6,8 @@ const router = Router();
 
 
 router.get('/', (req, res) => {
-    let products=productService.getAll();
-    res.render('home', { title: 'browse',products })
+    let products = productService.getAll();
+    res.render('home', { title: 'browse', products })
 });
 router.get('/create', (req, res) => {
     res.render('create', { title: 'create' })
@@ -15,7 +15,8 @@ router.get('/create', (req, res) => {
 
 router.get('/details/:productId', (req, res) => {
     console.log(req.params.productId);
-    res.render('details', { title: 'product details' });
+    let product = productService.getOne(req.params.productId);
+    res.render('details', { title: 'product details', product });
 
 });
 
