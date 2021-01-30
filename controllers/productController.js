@@ -22,10 +22,6 @@ router.get('/details/:productId', (req, res) => {
 });
 
 router.post('/create',validateProduct, (req, res) => {
-    /* productService.create(req.body);
-
-    res.redirect('/products'); */
-
     productService.create(req.body)
         .then(()=>res.redirect('/products'))
         .catch(()=>res.status(500).end())
