@@ -1,5 +1,6 @@
 const { Router } = require('express');
 const productService = require('../services/productService');
+const {validateProduct}=require('./helpers/productHelper');
 
 
 const router = Router();
@@ -20,11 +21,14 @@ router.get('/details/:productId', (req, res) => {
 
 });
 
-router.post('/create', (req, res) => {
+router.post('/create',validateProduct, (req, res) => {
     //need to validate inputs
     productService.create(req.body);
 
     res.redirect('/products');
-})
+});
+
+
+
 
 module.exports = router;
