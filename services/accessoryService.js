@@ -12,7 +12,12 @@ function getAll() {
 
 }
 
+function getAllWithout(ids) {
+    return Accessory.find({ _id: { $nin: ids } }).lean();
+}
+
 module.exports = {
     create,
     getAll,
+    getAllWithout,
 }
