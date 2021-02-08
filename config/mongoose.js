@@ -1,4 +1,5 @@
 const mongoose=require('mongoose');
+const config=require('./index');
 
 
 module.exports=(app)=>{

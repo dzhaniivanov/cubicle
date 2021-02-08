@@ -11,7 +11,6 @@ const router = Router();
 router.get('/', (req, res) => {
     productService.getAll(req.query)
         .then(products => {
-            console.log(products);
             res.render('home', { title: 'browse', products })
         })
         .catch(() => res.status(500).end())
@@ -23,7 +22,6 @@ router.get('/create', (req, res) => {
 
 router.get('/details/:productId', async (req, res) => {
     let product = await productService.getOneWithAccessories(req.params.productId)
-    console.log(product);
     res.render('details', { title: 'product details', product });
 
 });

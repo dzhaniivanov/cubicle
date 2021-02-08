@@ -1,5 +1,5 @@
 const express=require('express');
-const config=require('./config/config');
+const config=require('./config');
 const expressConfig=require('./config/express');
 const routes=require('./routes')
 const app=express();
